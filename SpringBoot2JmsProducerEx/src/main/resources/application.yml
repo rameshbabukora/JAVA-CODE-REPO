@@ -1,0 +1,10 @@
+my:
+  app:
+    desti-name: sample
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    password: admin
+    user: admin
+  jms:
+    pub-sub-domain: true

@@ -1,0 +1,38 @@
+<HTML xmlns:th="https://www.thymeleaf.org/">
+
+<HEAD>
+	<title>WELCOME TO SECURITY ORM</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</HEAD>
+
+<BODY>
+	<div class="container">
+
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h3> USER REGISTER PAGE </h3>
+			</div>
+			<div class="card-body">
+				<form th:action="@{/user/save}" method="POST">
+					NAME : <input type="text" name="name" class="form-control" />
+					EMAIL: <input type="text" name="email" class="form-control"/>
+					PASS : <input type="password" name="pwd" class="form-control"/> <br/>
+					ROLES:
+					<input type="checkbox" name="roles" value="ADMIN" />ADMIN
+					<input type="checkbox" name="roles" value="EMPLOYEE" />EMPLOYEE
+					<br/>
+					<button type="submit" class="btn btn-success">Register</button>
+				</form>
+
+			</div>
+			<div class="card-footer bg-info text-white">
+				[[${message}]]
+			</div>
+		</div>
+	</div>
+</BODY>
+
+</HTML>

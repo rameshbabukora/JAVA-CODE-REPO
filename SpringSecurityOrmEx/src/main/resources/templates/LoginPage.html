@@ -1,0 +1,21 @@
+<html 
+   xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<title>WELCOME TO SECURITY</title>
+</head>
+
+<body>
+	<h3>WELCOME TO LOGIN PAGE</h3>
+	<form method="post" th:action="@{/login}">
+	<pre>
+    Email: <input type="text" name="username" />
+    Pass : <input type="password" name="password"/>
+    <button  type="submit">Login In</button>
+	</pre>
+    </form>
+    <div th:if="${param.error}">Invalid Login details Found! </div>
+    <div th:if="${param.logout}">Logout Success!! </div>
+</body>
+
+</html>

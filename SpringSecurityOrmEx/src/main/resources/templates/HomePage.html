@@ -1,0 +1,17 @@
+<html 
+   xmlns:th="https://www.thymeleaf.org/" 
+   xmlns:sec="http://www.thymeleaf.org/extras/spring-security5">
+
+<head>
+	<title>WELCOME TO SECURITY</title>
+</head>
+
+<body>
+	<h3>WELCOME TO HOME AFTER LOGIN</h3>
+	<span sec:authentication="name"></span>
+	<span sec:authentication="principal.authorities"></span>
+	<hr/>
+	<a th:href="@{/signout}">CLICK TO LOGOUT</a>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<HTML xmlns:th="https://www.thymeleaf.org/">
+	<HEAD>
+		<title>WELCOME TO SECURITY ORM</title>
+	</HEAD>
+	<BODY>
+	<pre>
+		<h3> USER REGISTER PAGE </h3>
+		<form th:action="@{/user/save}" method="POST">
+			NAME : <input type="text" name="name"/>
+			EMAIL: <input type="text" name="email"/>
+			PASS : <input type="password" name="pwd"/>
+			ROLES: 
+				<input type="checkbox" name="roles" value="ADMIN"/>ADMIN
+				<input type="checkbox" name="roles" value="EMPLOYEE"/>EMPLOYEE
+				<button type="submit">Register</button>				
+		</form>
+		[[${message}]]
+	</pre>
+	</BODY>
+</HTML>

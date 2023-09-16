@@ -1,0 +1,22 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+	<head>
+		<title>WELCOME</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>FEE</th>
+			</tr>
+			<tr th:each="ob:${list}">
+				<td>[[${ob.sid}]]</td>
+				<td>[[${ob.sname}]]</td>
+				<td>[[${ob.sfee}]]</td>
+			</tr>
+		</table>
+	<hr/>
+		<p> Data is [[${list}]]</p>
+		<p th:text="${list}"></p>
+	</body>
+</html>
